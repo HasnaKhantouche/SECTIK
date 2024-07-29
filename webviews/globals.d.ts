@@ -8,4 +8,5 @@ declare global {
         init: (options: Object) => void;
         authenticate: (options: Object) => void;
     };
+    function acquireVsCodeApi(): any;
 }

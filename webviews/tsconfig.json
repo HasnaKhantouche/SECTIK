@@ -1,12 +1,32 @@
 {
-    "extends": "@tsconfig/svelte/tsconfig.json",
-    "include": [
-        "./**/*",
-    ],
-    "exclude": [
-        "../node_modules/*"
-    ],
-    "compilerOptions": {
-        "strict": true,
-    }
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "outDir": "./out",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*"],
+      "components/*": ["components/*"]
+    },
+    "ignoreDeprecations": "5.0"
+  },
+  "include": [
+    "src/**/*",
+    "webviews/components/**/*",
+    "webviews/pages/**/*",
+    "components/**/*.ts",
+    "components/**/*.svelte",
+    "globals.d.ts"
+  ],
+  "exclude": ["node_modules", "__sapper__/*", "public/*"]
 }
